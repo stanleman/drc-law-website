@@ -1,12 +1,16 @@
 import React from "react";
 
 const employees = [
-  { name: "Bryan Dela Rosa", position: "Position", image: "/bryan.jpg" },
-  { name: "Paul Vincent M. Casilla", position: "Position", image: "/paul.jpg" },
-  { name: "Beatriz Zamora", position: "Position", image: "/beatriz.jpg" },
-  { name: "Bienvenido Co", position: "Position", image: "/bienvenido.jpg" },
-  { name: "Paolo Villanueva", position: "Position", image: "/paolo.jpeg" },
-  { name: "Restine Joy Armada", position: "Position", image: "/restine.jpg" },
+  {
+    name: "Bryan Lloyd L. Dela Rosa",
+    position: "Managing Partner",
+    image: "/bryan.jpg",
+  },
+  { name: "Paul Vincent M. Casilla", position: "Partner", image: "/paul.jpg" },
+  { name: "Beatriz Zamora", position: "Associate", image: "/beatriz.jpg" },
+  { name: "Bienvenido Co", position: "Associate", image: "/bienvenido.jpg" },
+  { name: "Paolo Villanueva", position: "Associate", image: "/paolo.jpeg" },
+  { name: "Restine Joy Armada", position: "Associate", image: "/restine.jpg" },
 ];
 
 function People() {
