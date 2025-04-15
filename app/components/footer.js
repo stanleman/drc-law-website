@@ -6,6 +6,7 @@ import {
   Clock5,
   Phone,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -47,8 +48,16 @@ export default function Footer() {
 
       <div className="flex flex-row justify-between items-center">
         <h1 className="text-sm md:text-base lg:text-lg font-semibold text-[#BF8033]">
-          © 2025 Dela Rosa | Casilla Law Firm
+          © 2025 Dela Rosa & Casilla Law
         </h1>
+
+        <Image
+          src="/IR-logo.png"
+          width={120}
+          height={120}
+          alt="logo"
+          className="flex-shrink-0"
+        />
 
         <div className="flex gap-4">
           <a

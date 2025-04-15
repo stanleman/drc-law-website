@@ -18,7 +18,7 @@ export default function MobileNavbar() {
 
   return (
     <div className="w-full flex md:hidden justify-between items-center px-6 py-4 fixed top-0 left-0 right-0 z-50 bg-white">
-      <Image src="/logo.png" width={50} height={50} alt="logo" />
+      <Image src="/navbar-logo-no-bg.png" width={110} height={110} alt="logo" />
 
       <button onClick={() => setIsOpen(!isOpen)} className="z-50">
         {isOpen ? <X size={30} /> : <Menu size={30} />}
