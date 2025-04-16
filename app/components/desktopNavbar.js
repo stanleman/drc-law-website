@@ -26,38 +26,29 @@ export default function DesktopNavbar() {
       />
 
       <div className="flex flex-wrap gap-10 xl:gap-16 justify-center items-center min-w-0">
-        {["/", "/about", "/works", "/people"].map((path) => {
-          if (path == "/about") {
-            return (
-              <a
-                className={` ${
-                  pathname === path
-                    ? "font-bold scale-105"
-                    : "hover:scale-105 duration-150"
-                } whitespace-nowrap`}
-                href="#about"
-                key="about"
-              >
-                About
-              </a>
-            );
-          } else
-            return (
-              <Link key={path} href={path}>
-                <p
-                  className={` ${
-                    pathname === path
-                      ? "font-bold scale-105"
-                      : "hover:scale-105 duration-150"
-                  } whitespace-nowrap`}
-                >
-                  {path === "/"
-                    ? "Home"
-                    : path.replace("/", "").charAt(0).toUpperCase() +
-                      path.slice(2)}
-                </p>
-              </Link>
-            );
+        {["/", "/about", "/expertise", "/people"].map((path) => {
+          const isActive = pathname === path;
+          const label =
+            path === "/"
+              ? "Home"
+              : path.replace("/", "").charAt(0).toUpperCase() +
+                path.replace("/", "").slice(1);
+
+          const href = path === "/about" ? "/#about" : path;
+
+          return (
+            <Link
+              key={path}
+              href={href}
+              className={`${
+                isActive
+                  ? "font-bold scale-105"
+                  : "hover:scale-105 duration-150"
+              } whitespace-nowrap`}
+            >
+              {label}
+            </Link>
+          );
         })}
       </div>
 
@@ -73,29 +64,40 @@ export default function DesktopNavbar() {
               Contact us
             </DialogTitle>
           </DialogHeader>
-          <form className="space-y-4">
-            <div className="flex flex-col md:flex-row gap-4">
-              <input
-                type="text"
-                placeholder="First name"
-                className="w-full md:w-1/2 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <input
-                type="text"
-                placeholder="Last name"
-                className="w-full md:w-1/2 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+          <form className="">
+            <label className="font-medium text-gray-700">Name</label>
+            <input
+              type="text"
+              placeholder="Your name"
+              className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+
+            <label className="font-medium text-gray-700 ">Email</label>
             <input
               type="email"
-              placeholder="Email"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Your email"
+              className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+
+            <label className="font-medium text-gray-700">Phone number</label>
             <input
               type="tel"
-              placeholder="Phone number"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Your phone number"
+              className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+
+            <div>
+              <label className="block mb-1 font-medium text-gray-700">
+                Message
+              </label>
+              <textarea
+                id="message"
+                placeholder="Your message"
+                rows="4"
+                className="w-full px-4 py-2 mb-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+            </div>
+
             <button
               type="submit"
               className="w-full bg-[#152F52] text-white py-2 rounded-md font-semibold hover:bg-[#1c3b6f] transition"

@@ -34,11 +34,11 @@ export default function MobileNavbar() {
             <Link href="/" onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            <Link href="/about" onClick={() => setIsOpen(false)}>
+            <Link href="/#about" onClick={() => setIsOpen(false)}>
               About
             </Link>
-            <Link href="/works" onClick={() => setIsOpen(false)}>
-              Works
+            <Link href="/expertise" onClick={() => setIsOpen(false)}>
+              Expertise
             </Link>
             <Link href="/people" onClick={() => setIsOpen(false)}>
               People
@@ -46,7 +46,7 @@ export default function MobileNavbar() {
           </nav>
 
           <Dialog>
-            <DialogTrigger className="my-4">
+            <DialogTrigger>
               <div className="px-6 py-2 rounded-full bg-[#152F52] text-white font-semibold text-base whitespace-nowrap">
                 Contact us
               </div>
@@ -57,29 +57,42 @@ export default function MobileNavbar() {
                   Contact us
                 </DialogTitle>
               </DialogHeader>
-              <form className="space-y-4">
-                <div className="flex flex-col md:flex-row gap-4">
-                  <input
-                    type="text"
-                    placeholder="First name"
-                    className="w-full md:w-1/2 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last name"
-                    className="w-full md:w-1/2 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
+              <form className="">
+                <label className="font-medium text-gray-700">Name</label>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+
+                <label className="font-medium text-gray-700 ">Email</label>
                 <input
                   type="email"
-                  placeholder="Email"
-                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Your email"
+                  className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+
+                <label className="font-medium text-gray-700">
+                  Phone number
+                </label>
                 <input
                   type="tel"
-                  placeholder="Phone number"
-                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Your phone number"
+                  className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+
+                <div>
+                  <label className="block mb-1 font-medium text-gray-700">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    placeholder="Your message"
+                    rows="4"
+                    className="w-full px-4 py-2 mb-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  ></textarea>
+                </div>
+
                 <button
                   type="submit"
                   className="w-full bg-[#152F52] text-white py-2 rounded-md font-semibold hover:bg-[#1c3b6f] transition"

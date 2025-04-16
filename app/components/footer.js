@@ -51,13 +51,18 @@ export default function Footer() {
           © 2025 Dela Rosa & Casilla Law
         </h1>
 
-        <Image
-          src="/IR-logo.png"
-          width={120}
-          height={120}
-          alt="logo"
-          className="flex-shrink-0"
-        />
+        <a
+          href="https://irglobal.com/article/dela-rosa-casilla-law-joins-ir-global-as-an-exclusive-member-in-philippines/
+"
+        >
+          <Image
+            src="/IR-logo.png"
+            width={120}
+            height={120}
+            alt="logo"
+            className="flex-shrink-0"
+          />
+        </a>
 
         <div className="flex gap-4">
           <a

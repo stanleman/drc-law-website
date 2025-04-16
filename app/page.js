@@ -22,14 +22,17 @@ export default function Home() {
 
         <div className="absolute inset-0 flex items-center justify-center px-4 xsm:px-10 sm:px-20 md:px-32 lg:px-48">
           <div className="bg-[#1E2938] bg-opacity-90 text-white p-5 sm:p-10 ">
-            <h2 className="text-sm md:text-base font-semibold text-[#BF8033]">
-              Lorem ipsum dolor sit amet
+            <h2 className="text-sm md:text-lg font-semibold text-[#BF8033]">
+              What do we do?
             </h2>
-            <p className="mt-2 text-sm sm:text-base lg:text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non
-              suscipit arcu. Fusce sit amet libero neque. Donec velit metus,
-              vehicula non elit id, aliquet efficitur lectus.
+            <p className="mt-2 text-sm sm:text-base lg:text-xl">
+              Dela Rola Casilla provides legal services to commited clients with
+              an optimistic voice.
             </p>
+
+            <button className="bg-[#BF8033] px-5 py-3 mt-5">
+              Book a consultation
+            </button>
           </div>
         </div>
       </div>
