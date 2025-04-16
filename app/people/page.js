@@ -6,7 +6,7 @@ const employees = [
   {
     name: "Bryan Lloyd L. Dela Rosa",
     position: "Managing Partner",
-    image: "/Bryan4.jpg",
+    image: "/Bryan5.jpg",
   },
   {
     name: "Paul Vincent M. Casilla",
